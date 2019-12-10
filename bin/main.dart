@@ -1,4 +1,5 @@
-class Student{
+import 'dart:io';
+class Student {
   String name;
   int score;
 
@@ -56,6 +57,28 @@ printStudentList(List<Student> students){
 
 // Challenge 4 - Sort the students based on their scores
 
+// PART 2
+// Write a function which prints 'Beginning Task n', delays for n seconds and prints
+// 'Completed Task n'
+Future nSecondDelay(int n) async {
+  print(" Beginning Task $n");
+  await  Future.delayed(Duration(seconds: n));
+   print("Completed Task $n");
+}
+void nSecondDelayUsingThen(int n) {
+
+  print(" Beginning Task $n");
+   Future.delayed(Duration(seconds: n)).then((value){
+     print("Completed Task $n");
+   });
+
+}
+
+// PART 3
+// Create a new function which does the same thing as previous function but
+// without await keyword . (HINT: use '.then' method)
+
+
 void main() {
   Student Ram=Student("Ram",87);
   Student Shyam=Student("Shyam",80);
@@ -66,4 +89,6 @@ printStudentDetails(Ram);
   printStudentDetails(Ghanshyam);
   findMaxScore(students);
   sortStudentsByScore(students);
+  //nSecondDelay(5);
+  nSecondDelayUsingThen(5);
 }
