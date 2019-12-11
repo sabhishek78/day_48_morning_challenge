@@ -84,11 +84,13 @@ void main() {
   Student Shyam=Student("Shyam",80);
   Student Ghanshyam= Student("Ghanshyam",91);
   List<Student> students=[Ram,Shyam,Ghanshyam];
-printStudentDetails(Ram);
+  printStudentDetails(Ram);
   printStudentDetails(Shyam);
   printStudentDetails(Ghanshyam);
   findMaxScore(students);
   sortStudentsByScore(students);
-  //nSecondDelay(5);
+  nSecondDelay(3);
+  nSecondDelay(2);
+  nSecondDelay(1);
   nSecondDelayUsingThen(5);
 }
